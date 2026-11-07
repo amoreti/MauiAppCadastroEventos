@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppCadastroEventos.View.CadastroEventoPage"
+             Title="Cadastro de Eventos"
+             NavigationPage.HasNavigationBar="False">
+   
+
+
+    <ScrollView>
+
+        <VerticalStackLayout
+            Padding="20"
+            Spacing="15">
+
+            <Label
+                Text="Cadastro de Eventos"
+                FontSize="28"
+                TextColor="White"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"/>
+
+            <Label Text="Nome do Evento"
+                   TextColor="White"/>
+
+            <Entry
+                x:Name="txtNomeEvento"
+                Placeholder="Digite o nome do evento"
+                TextColor="Grey"/>
+
+            <Label Text="Data de Início"
+                   TextColor="White"/>
+
+            <DatePicker
+                x:Name="dtInicio"
+                TextColor="Grey"
+                DateSelected="dtInicio_DateSelected"/>
+
+            <Label Text="Data de Término"
+                   TextColor="White"/>
+
+            <DatePicker
+                x:Name="dtTermino"
+                TextColor="Grey"
+                DateSelected="dtTermino_DateSelected"/>
+
+            <Label Text="Número de Participantes"
+                   TextColor="White"/>
+
+            <Entry
+                x:Name="txtParticipantes"
+                Keyboard="Numeric"
+                Placeholder="Informe a quantidade"
+                TextColor="Grey"/>
+
+            <Label Text="Local do Evento"
+                   TextColor="White"/>
+
+            <Entry
+                x:Name="txtLocalEvento"
+                Placeholder="Digite o local"
+                TextColor="Grey"/>
+
+            <Label Text="Custo por Participante (R$)"
+                   TextColor="White"/>
+
+            <Entry
+                x:Name="txtCustoParticipante"
+                Keyboard="Numeric"
+                Placeholder="Ex.: 150"
+                TextColor="Grey"/>
+
+            <Button
+                Text="Cadastrar Evento"
+                Clicked="CadastrarEvento_Clicked"/>
+
+
+        </VerticalStackLayout>
+
+    </ScrollView>
+
+</ContentPage>

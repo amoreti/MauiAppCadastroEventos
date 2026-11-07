@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppCadastroEventos.View.EventoCadastrado"
+             Title="Evento Cadastrado"
+             NavigationPage.HasNavigationBar="False">
+
+    <ScrollView>
+
+        <VerticalStackLayout
+            Padding="20"
+            Spacing="12">
+
+            <Label
+                Text="Evento Cadastrado!"
+                FontSize="24"
+                TextColor="White"
+                FontAttributes="Bold"
+                HorizontalOptions="Center" />
+
+            <Frame BorderColor="LightGray">
+
+                <VerticalStackLayout Spacing="10">
+
+                    <Label
+                        Text="{Binding NomeEvento,StringFormat='Nome do Evento: {0}'}" 
+                        TextColor="Grey"/>
+
+                    <Label
+                        Text="{Binding DataInicioFormatada,StringFormat='Início: {0}'}"
+                        TextColor="Grey"/>
+
+                    <Label
+                        Text="{Binding DataTerminoFormatada,StringFormat='Término: {0}'}"
+                        TextColor="Grey"/>
+
+                    <Label 
+                        Text="{Binding LocalEvento,StringFormat='Local do Evento: {0}'}" 
+                        TextColor="Grey"/>
+
+                    <Label 
+                        Text="{Binding NumeroParticipantes,StringFormat='Participantes: {0}'}"
+                        TextColor="Grey"/>
+
+                    <Label 
+                        Text="{Binding CustoPorParticipante,StringFormat='Custo por Participante: R$ {0:N2}'}"
+                        TextColor="Grey"/>
+
+                    <Label 
+                        Text="{Binding QuantidadeDias,StringFormat='Duração: {0} dias'}"
+                        TextColor="Grey"/>
+
+                    <Label 
+                        FontAttributes="Bold"
+                        Text="{Binding CustoTotal,StringFormat='Custo Total: R$ {0:N2}'}"
+                        TextColor="Grey"/>
+
+                    <Button
+                        Text="Voltar"
+                        Clicked="Voltar_Clicked"
+                        Margin="0,20,0,0"/> 
+
+                </VerticalStackLayout>
+
+            </Frame>
+
+        </VerticalStackLayout>
+
+    </ScrollView>
+
+</ContentPage>
